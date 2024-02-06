@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"pg_flame/pkg/html"
-	"pg_flame/pkg/plan"
+	"github.com/paul-at-cybr/pg_flame/html"
+	"github.com/paul-at-cybr/pg_flame/plan"
 )
 
 var (

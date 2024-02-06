@@ -1,10 +1,9 @@
-FROM golang:1.13
+FROM golang:1.21
 
-WORKDIR /go/src
+WORKDIR /go/src/github.com/paul-at-start/pg_flame
 
-RUN cd /go/src \
-  && git clone https://github.com/mgartner/pg_flame.git \
-  && cd pg_flame \
-  && go build
+COPY . .
 
-ENTRYPOINT [ "pg_flame/pg_flame" ]
+RUN make build
+
+ENTRYPOINT [ "pgflame" ]
